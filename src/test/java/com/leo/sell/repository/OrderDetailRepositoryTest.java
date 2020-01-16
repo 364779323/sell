@@ -38,4 +38,5 @@ public class OrderDetailRepositoryTest {
         List<OrderDetail> orderDetailList = repository.findByOrderId("11111112");
         Assert.assertNotEquals(0, orderDetailList.size());
     }
+
 }
