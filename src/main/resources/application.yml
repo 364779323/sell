@@ -7,9 +7,16 @@ spring:
   jpa:
     show-sql: true
   #如果字段为null 统一不返回
-#  jackson:
-#    default-property-inclusion: non_null
-
+  jackson:
+    default-property-inclusion: non_null
+  freemarker:
+    suffix: .ftl
 server:
   servlet:
     context-path: /sell
+wechat:
+  mpAppId: wxc19f2e5f35fb02d5
+  mpAppSecret: 6e966b4085db9f25b9a438cc417e1540
+  mchId:
+  mchKey:
+  keyPaht:

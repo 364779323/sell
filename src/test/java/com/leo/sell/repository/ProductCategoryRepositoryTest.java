@@ -19,10 +19,15 @@ public class ProductCategoryRepositoryTest {
     @Autowired
     private CategoryServiceImpl categoryService;
 
+    @Autowired
+    private ProductCategoryRepository productCategoryRepository;
+
     @Test
     public void findOne() throws Exception {
-        ProductCategory productCategory = categoryService.findOne(1);
-        Assert.assertEquals(new Integer(1), productCategory.getCategoryId());
+        ProductCategory productCategory = productCategoryRepository.findById(1).get();
+        //ProductCategory productCategory = categoryService.findOne(1);
+        //Assert.assertEquals(new Integer(1), productCategory.getCategoryId());
+        System.out.println(productCategory.toString());
     }
 
     @Test
